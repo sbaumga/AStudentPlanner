@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calendar.exe" size="3716096">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calendar.exe" size="3716608">
       <assemblyIdentity name="Calendar" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Z9dfyw2EJ4J+UbaQst84U6JjQHs=</dsig:DigestValue>
+        <dsig:DigestValue>ghFAtcoNBmtrubAQmMoZ6t+B6B8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
