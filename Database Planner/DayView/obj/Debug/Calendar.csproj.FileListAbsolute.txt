@@ -1,0 +1,53 @@
+E:\Projects\Calendar\DayView\bin\Debug\Calendar.DayView.dll
+E:\Projects\Calendar\DayView\bin\Debug\Calendar.DayView.pdb
+E:\Projects\Calendar\DayView\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\Calendar\DayView\obj\Debug\Calendar.DayView.dll
+E:\Projects\Calendar\DayView\obj\Debug\Calendar.DayView.pdb
+F:\Projects\Calendar\DayView\bin\Debug\Calendar.DayView.dll
+F:\Projects\Calendar\DayView\bin\Debug\Calendar.DayView.pdb
+F:\Projects\Calendar\DayView\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\Calendar\DayView\obj\Debug\Calendar.DayView.dll
+F:\Projects\Calendar\DayView\obj\Debug\Calendar.DayView.pdb
+F:\Projects\Calendar\DayView\obj\Debug\Calendar.CalendarResources.resources
+F:\Projects\Calendar\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+E:\Projects\Calendar\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+F:\Projects\Calendar\DayView\obj\Debug\Calendar.TestForm.resources
+E:\Projects\Calendar\DayView\obj\Debug\Calendar.TestForm.resources
+E:\Projects\Calendar\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+D:\Work\ZZ\Calendar_1.x\DayView\bin\Debug\Calendar.DayView.dll
+D:\Work\ZZ\Calendar_1.x\DayView\bin\Debug\Calendar.DayView.pdb
+D:\Work\ZZ\Calendar_1.x\DayView\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\ZZ\Calendar_1.x\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+D:\Work\ZZ\Calendar_1.x\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+D:\Work\ZZ\Calendar_1.x\DayView\obj\Debug\Calendar.DayView.dll
+D:\Work\ZZ\Calendar_1.x\DayView\obj\Debug\Calendar.DayView.pdb
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\bin\Debug\Calendar.DayView.dll
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\bin\Debug\Calendar.DayView.pdb
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\ResolveAssemblyReference.cache
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\GenerateResource-ResGen.read.1.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\GenerateResource-ResGen.read.6.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\GenerateResource-ResGen.write.1.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
+H:\Docs\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\bin\Debug\Calendar.DayView.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\bin\Debug\Calendar.DayView.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\ResGen.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\ResGen.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\bin\Debug\Calendar.DayView.dll
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\bin\Debug\Calendar.DayView.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\bin\Debug\Calendar.DayView.dll
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\bin\Debug\Calendar.DayView.pdb
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.csprojResolveAssemblyReference.cache
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
+C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb

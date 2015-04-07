@@ -1,0 +1,130 @@
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.exe.config
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.application
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.DayView.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\System.Data.SQLite.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\Calendar.DayView.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\bin\Release\System.Data.SQLite.xml
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddEventForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AuthenticationForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.ContactForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddProfessorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddPhoneNumberForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddOfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddClassForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddGradingScaleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.GoogleAccountSettings.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditGradingScaleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditClassForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditOfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditPhoneNumberForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditProfessorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.CreateDatabaseForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.DatabaseEncryptionForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.DatabasePasswordForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditEventForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.EditGradeCategoriesForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.FinalsCalculatorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AssignmentPlanner.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.AddGradeCategoriesForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.MailSettingsForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.OfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Planner.ScheduleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\ResGen.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\ResGen.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Calendar.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Calendar.application
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Database Planner\Calendar\obj\Release\Calendar.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.exe.config
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.application
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.DayView.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\System.Data.SQLite.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\Calendar.DayView.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Release\System.Data.SQLite.xml
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddEventForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AuthenticationForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.ContactForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddProfessorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddPhoneNumberForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddOfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddClassForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddGradingScaleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddSemesterForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditSemesterForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.GoogleAccountSettings.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditGradingScaleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditClassForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditOfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditPhoneNumberForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditProfessorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.CreateDatabaseForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.DatabaseEncryptionForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.DatabasePasswordForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditEventForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.EditGradeCategoriesForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.FinalsCalculatorForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AssignmentPlanner.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.AddGradeCategoriesForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.MailSettingsForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.OfficeHoursForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Planner.ScheduleForm.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\ResGen.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\ResGen.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Calendar.exe.manifest
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Calendar.application
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Release\Calendar.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.exe.config
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.exe.manifest
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.application
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.exe
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.DayView.dll
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\System.Data.SQLite.dll
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\Calendar.DayView.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\System.Data.SQLite.pdb
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\bin\Release\System.Data.SQLite.xml
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.csprojResolveAssemblyReference.cache
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddEventForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AuthenticationForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.ContactForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddProfessorForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddPhoneNumberForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddOfficeHoursForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddClassForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddGradingScaleForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddSemesterForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditSemesterForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.GoogleAccountSettings.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditGradingScaleForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditClassForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditOfficeHoursForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditPhoneNumberForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditProfessorForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.CreateDatabaseForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.DatabaseEncryptionForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.DatabasePasswordForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditEventForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.EditGradeCategoriesForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.FinalsCalculatorForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AssignmentPlanner.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.AddGradeCategoriesForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.MailSettingsForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.OfficeHoursForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.Properties.Resources.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.ScheduleForm.resources
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Planner.csproj.GenerateResource.Cache
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Calendar.exe.manifest
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Calendar.application
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Calendar.exe
+C:\Users\David\Downloads\Source-8-30-11\Database Planner\Calendar\obj\Release\Calendar.pdb

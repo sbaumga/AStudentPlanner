@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{453E040A-8DFA-43A7-BD31-8A5826104FFC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Planner</RootNamespace>
+    <AssemblyName>Calendar</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>A+ Student Planner</ProductName>
+    <PublisherName>A+ Student Planner</PublisherName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>FCADEAA0BA9CCAE59600D7EE8C478883C0E39409</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Planner_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pencil.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Google.GData.AccessControl, Version=1.7.0.1, Culture=neutral, PublicKeyToken=b4b8eb9a7afc8328, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Google.GData.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Calendar, Version=1.7.0.1, Culture=neutral, PublicKeyToken=aa6748391206b888, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Google.GData.Calendar.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Client, Version=1.7.0.1, Culture=neutral, PublicKeyToken=04a59ca9b0273830, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Google.GData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.GData.Extensions, Version=1.7.0.1, Culture=neutral, PublicKeyToken=0b4c5df2ebf20876, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Release\Google.GData.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\sqlite-netFx40-static-binary-bundle-x64-2010-1.0.93.0\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEventForm.Designer.cs">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenticationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthenticationForm.Designer.cs">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ContactForm.Designer.cs">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProfessorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProfessorForm.Designer.cs">
+      <DependentUpon>AddProfessorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPhoneNumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhoneNumberForm.Designer.cs">
+      <DependentUpon>AddPhoneNumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddOfficeHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddOfficeHoursForm.Designer.cs">
+      <DependentUpon>AddOfficeHoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassForm.Designer.cs">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGradingScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGradingScaleForm.Designer.cs">
+      <DependentUpon>AddGradingScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSemesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSemesterForm.Designer.cs">
+      <DependentUpon>AddSemesterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditSemesterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditSemesterForm.Designer.cs">
+      <DependentUpon>EditSemesterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleAccountSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GoogleAccountSettings.Designer.cs">
+      <DependentUpon>GoogleAccountSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditGradingScaleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGradingScaleForm.Designer.cs">
+      <DependentUpon>EditGradingScaleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditClassForm.Designer.cs">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditOfficeHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditOfficeHoursForm.Designer.cs">
+      <DependentUpon>EditOfficeHoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditPhoneNumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPhoneNumberForm.Designer.cs">
+      <DependentUpon>EditPhoneNumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProfessorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProfessorForm.Designer.cs">
+      <DependentUpon>EditProfessorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateDatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateDatabaseForm.Designer.cs">
+      <DependentUpon>CreateDatabaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseEncryptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabaseEncryptionForm.Designer.cs">
+      <DependentUpon>DatabaseEncryptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabasePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatabasePasswordForm.Designer.cs">
+      <DependentUpon>DatabasePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEventForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEventForm.Designer.cs">
+      <DependentUpon>EditEventForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditGradeCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditGradeCategoriesForm.Designer.cs">
+      <DependentUpon>EditGradeCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database.cs" />
+    <Compile Include="FinalsCalculatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinalsCalculatorForm.Designer.cs">
+      <DependentUpon>FinalsCalculatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignmentPlanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignmentPlanner.Designer.cs">
+      <DependentUpon>AssignmentPlanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddGradeCategoriesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddGradeCategoriesForm.Designer.cs">
+      <DependentUpon>AddGradeCategoriesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleCalendarSync.cs" />
+    <Compile Include="PlannerSettings.cs" />
+    <Compile Include="PlannerSettings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>PlannerSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Util.cs" />
+    <Compile Include="MailSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MailSettingsForm.Designer.cs">
+      <DependentUpon>MailSettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OfficeHoursForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OfficeHoursForm.Designer.cs">
+      <DependentUpon>OfficeHoursForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScheduleForm.Designer.cs">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEventForm.resx">
+      <DependentUpon>AddEventForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthenticationForm.resx">
+      <DependentUpon>AuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactForm.resx">
+      <DependentUpon>ContactForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProfessorForm.resx">
+      <DependentUpon>AddProfessorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPhoneNumberForm.resx">
+      <DependentUpon>AddPhoneNumberForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddOfficeHoursForm.resx">
+      <DependentUpon>AddOfficeHoursForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClassForm.resx">
+      <DependentUpon>AddClassForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGradingScaleForm.resx">
+      <DependentUpon>AddGradingScaleForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSemesterForm.resx">
+      <DependentUpon>AddSemesterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditSemesterForm.resx">
+      <DependentUpon>EditSemesterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoogleAccountSettings.resx">
+      <DependentUpon>GoogleAccountSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGradingScaleForm.resx">
+      <DependentUpon>EditGradingScaleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditClassForm.resx">
+      <DependentUpon>EditClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditOfficeHoursForm.resx">
+      <DependentUpon>EditOfficeHoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPhoneNumberForm.resx">
+      <DependentUpon>EditPhoneNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProfessorForm.resx">
+      <DependentUpon>EditProfessorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateDatabaseForm.resx">
+      <DependentUpon>CreateDatabaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabaseEncryptionForm.resx">
+      <DependentUpon>DatabaseEncryptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatabasePasswordForm.resx">
+      <DependentUpon>DatabasePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEventForm.resx">
+      <DependentUpon>EditEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditGradeCategoriesForm.resx">
+      <DependentUpon>EditGradeCategoriesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinalsCalculatorForm.resx">
+      <DependentUpon>FinalsCalculatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignmentPlanner.resx">
+      <DependentUpon>AssignmentPlanner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddGradeCategoriesForm.resx">
+      <DependentUpon>AddGradeCategoriesForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MailSettingsForm.resx">
+      <DependentUpon>MailSettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OfficeHoursForm.resx">
+      <DependentUpon>OfficeHoursForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScheduleForm.resx">
+      <DependentUpon>ScheduleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="PlannerSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>PlannerSettings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Planner_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DayView\Calendar.csproj">
+      <Project>{D17A4D6A-4CAA-4470-8A19-F42463C021FD}</Project>
+      <Name>Calendar</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-Out-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoom-In-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Text-Document-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pencil.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

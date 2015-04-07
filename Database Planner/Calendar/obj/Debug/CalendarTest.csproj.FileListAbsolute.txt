@@ -1,0 +1,55 @@
+E:\Projects\Calendar\Calendar\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.Form1.resources
+E:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.Properties.Resources.resources
+E:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.csproj.GenerateResource.Cache
+E:\Projects\Calendar\Calendar\obj\Debug\Calendar.exe
+E:\Projects\Calendar\Calendar\obj\Debug\Calendar.pdb
+E:\Projects\Calendar\Calendar\bin\Debug\Calendar.exe
+E:\Projects\Calendar\Calendar\bin\Debug\Calendar.pdb
+E:\Projects\Calendar\Calendar\bin\Debug\Calendar.DayView.dll
+E:\Projects\Calendar\Calendar\bin\Debug\Calendar.DayView.pdb
+F:\Projects\Calendar\Calendar\obj\Debug\Calendar.exe
+F:\Projects\Calendar\Calendar\obj\Debug\Calendar.pdb
+F:\Projects\Calendar\Calendar\obj\Debug\ResolveAssemblyReference.cache
+F:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.Form1.resources
+F:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.Properties.Resources.resources
+F:\Projects\Calendar\Calendar\obj\Debug\CalendarTest.csproj.GenerateResource.Cache
+F:\Projects\Calendar\Calendar\bin\Debug\Calendar.exe
+F:\Projects\Calendar\Calendar\bin\Debug\Calendar.pdb
+F:\Projects\Calendar\Calendar\bin\Debug\Calendar.DayView.dll
+F:\Projects\Calendar\Calendar\bin\Debug\Calendar.DayView.pdb
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\Calendar.exe
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\Calendar.pdb
+D:\Work\ZZ\Calendar_1.x\Calendar\bin\Debug\Calendar.exe
+D:\Work\ZZ\Calendar_1.x\Calendar\bin\Debug\Calendar.pdb
+D:\Work\ZZ\Calendar_1.x\Calendar\bin\Debug\Calendar.DayView.dll
+D:\Work\ZZ\Calendar_1.x\Calendar\bin\Debug\Calendar.DayView.pdb
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\ResolveAssemblyReference.cache
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\CalendarTest.Form1.resources
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\CalendarTest.Properties.Resources.resources
+D:\Work\ZZ\Calendar_1.x\Calendar\obj\Debug\CalendarTest.csproj.GenerateResource.Cache
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.exe
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.pdb
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.DayView.dll
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.DayView.pdb
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\ResolveAssemblyReference.cache
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Form1.resources
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Form2.resources
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Properties.Resources.resources
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\GenerateResource-ResGen.read.1.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\GenerateResource-ResGen.read.4.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\GenerateResource-ResGen.write.1.tlog
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\Calendar.exe
+H:\Docs\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\Calendar.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Form1.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Form2.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\CalendarTest.Properties.Resources.resources
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\ResGen.read.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\ResGen.write.1.tlog
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.DayView.dll
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\bin\Debug\Calendar.DayView.pdb
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\Calendar.exe
+D:\Documents\Visual Studio 2010\Projects\Database Planner\Calendar\obj\Debug\Calendar.pdb
