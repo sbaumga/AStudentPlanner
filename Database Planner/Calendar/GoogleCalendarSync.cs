@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 //used for adding events to Google Calendar
 using Google.GData.Calendar;
@@ -182,7 +182,7 @@ namespace Planner {
 
         public static void mergeChanges(){
             if (authenticated == true) {
-                SQLiteDataReader events = Database.executeQuery("SELECT GoogleEventID FROM EVENT WHERE GoogleEventID IS NOT NULL AND StartDateTime > DATETIME('now', 'localtime')");
+                MySqlDataReader events = Database.executeQuery("SELECT GoogleEventID FROM EVENT WHERE GoogleEventID IS NOT NULL AND StartDateTime > DATETIME('now', 'localtime')");
                 while (events.Read() == true) {
                     try {
                         EventQuery myQuery = new EventQuery(postUri.ToString() + "/" + events.GetString(0));

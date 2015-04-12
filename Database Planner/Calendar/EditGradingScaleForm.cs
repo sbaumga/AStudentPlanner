@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -20,7 +20,7 @@ namespace Planner
             currentClassId = currentClass;
 
             //get current grading scale for the current class
-            SQLiteDataReader grades = Database.executeQuery("SELECT GradeLetter, BottomPercentage FROM GradingScaleValue WHERE ClassID = '" + currentClassId + "' AND GradeLetter != 'F';");
+            MySqlDataReader grades = Database.executeQuery("SELECT GradeLetter, BottomPercentage FROM GradingScaleValue WHERE ClassID = '" + currentClassId + "' AND GradeLetter != 'F';");
             while (grades.Read() == true) {
                 String grade = "ctr" + grades.GetString(0);
                 grade = grade.Replace("-", "Minus");

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -129,7 +129,7 @@ namespace Planner
             int currentSemesterId = semesterId[cbEditSemester.SelectedIndex];
 
             //dynamically populate semester information
-            SQLiteDataReader selectedSemester = Database.executeQuery("SELECT * FROM Semester WHERE SemesterID = '" + currentSemesterId + "';");
+            MySqlDataReader selectedSemester = Database.executeQuery("SELECT * FROM Semester WHERE SemesterID = '" + currentSemesterId + "';");
 
             //only one item should be returned
             if (selectedSemester.Read() == true) {

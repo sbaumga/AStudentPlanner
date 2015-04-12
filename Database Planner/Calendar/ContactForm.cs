@@ -8,8 +8,8 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Diagnostics;
 using System.Net;
-using System.Data.SQLite;
 using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace Planner {
     public partial class ContactForm : Form {
@@ -27,7 +27,7 @@ namespace Planner {
             txtEmailFrom.Text = PlannerSettings.Default.EmailAddress;
 
             //dynamically add professors to combo box, also storing ProfId and Email in separate lists
-            SQLiteDataReader profs = Database.executeQuery("SELECT ProfID, Title, FirstName, LastName, Email FROM Professor ORDER BY LastName");           
+            MySqlDataReader profs = Database.executeQuery("SELECT ProfID, Title, FirstName, LastName, Email FROM Professor ORDER BY LastName");           
             while (profs.Read() == true) {
                 profId.Add(profs.GetInt32(0));
                 cbSelectProfessor.Items.Add((profs.GetValue(1) + " " + profs.GetValue(2) + " " + profs.GetString(3)).Trim());
@@ -134,7 +134,7 @@ namespace Planner {
             lblPhoneNumbers.Text = "";
 
             //get the professors list of phone numbers and update the phone numbers section
-            SQLiteDataReader phoneNums = Database.executeQuery("SELECT Type, PhoneNumber FROM Phone WHERE ProfID = '" + profId[cbSelectProfessor.SelectedIndex] + "' ORDER BY Type");
+            MySqlDataReader phoneNums = Database.executeQuery("SELECT Type, PhoneNumber FROM Phone WHERE ProfID = '" + profId[cbSelectProfessor.SelectedIndex] + "' ORDER BY Type");
             while (phoneNums.Read() == true) {
                 if (phoneNums.GetString(0).Equals("") == false) {
                     lblPhoneNumbers.Text += phoneNums.GetString(0) + ": ";

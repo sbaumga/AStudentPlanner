@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner {
     public partial class FinalsCalculatorForm : Form {
@@ -92,7 +92,7 @@ namespace Planner {
             cbFinalLetterGrade.Items.Clear();
 
             //populate the desired grade percentage based on a selected latter grade
-            SQLiteDataReader grades = Database.executeQuery("SELECT GradeLetter, BottomPercentage FROM GradingScaleValue WHERE ClassID = '" + classId[cbClass.SelectedIndex] + "' ORDER BY BottomPercentage DESC");
+            MySqlDataReader grades = Database.executeQuery("SELECT GradeLetter, BottomPercentage FROM GradingScaleValue WHERE ClassID = '" + classId[cbClass.SelectedIndex] + "' ORDER BY BottomPercentage DESC");
             while (grades.Read() == true) {
                 gradeLetter.Add(grades.GetString(0));
                 cbFinalLetterGrade.Items.Add(grades.GetString(0));

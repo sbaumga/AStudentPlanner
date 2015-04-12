@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 using Calendar;
 
 namespace Planner {
@@ -31,7 +31,7 @@ namespace Planner {
             Util.addClasses(cbEventClass, currentClassId, true, false, null, null);
 
             //dynamically add list of possible events to edit
-            SQLiteDataReader events = Database.executeQuery("SELECT EventID, Title FROM Event ORDER BY Title");
+            MySqlDataReader events = Database.executeQuery("SELECT EventID, Title FROM Event ORDER BY Title");
             while (events.Read() == true) {
                 eventId.Add(events.GetInt32(0));
                 cbEvent.Items.Add(events.GetString(1));
@@ -184,7 +184,7 @@ namespace Planner {
             query.Append(" ORDER BY Title");
 
             //dynamically add list of possible events to edit          
-            SQLiteDataReader events = Database.executeQuery(query.ToString());
+            MySqlDataReader events = Database.executeQuery(query.ToString());
             while (events.Read() == true) {
                 eventId.Add(events.GetInt32(0));
                 cbEvent.Items.Add(events.GetString(1));
@@ -211,7 +211,7 @@ namespace Planner {
 
         public void loadEvent(int eventNum) {
             //dynamically get information about the selected event         
-            SQLiteDataReader events = Database.executeQuery("SELECT * FROM Event WHERE EventID = '" + eventNum + "';");
+            MySqlDataReader events = Database.executeQuery("SELECT * FROM Event WHERE EventID = '" + eventNum + "';");
 
             //there should only be one event returned
             while (events.Read() == true) {
@@ -229,7 +229,7 @@ namespace Planner {
             events.Close();
 
             //query to get information if a graded assignment
-            SQLiteDataReader graded = Database.executeQuery("SELECT * FROM GradedAssignment WHERE EventID = '"
+            MySqlDataReader graded = Database.executeQuery("SELECT * FROM GradedAssignment WHERE EventID = '"
                 + eventNum + "';");
 
             //clear the existing grade information

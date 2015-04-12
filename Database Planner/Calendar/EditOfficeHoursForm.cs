@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -29,7 +29,7 @@ namespace Planner
             currentProfId = currentProf;
 
             //dynamically retrieve all office hours information and store in lists
-            SQLiteDataReader hours = Database.executeQuery("SELECT * FROM OfficeHour WHERE ProfID = '" + currentProfId + "';");
+            MySqlDataReader hours = Database.executeQuery("SELECT * FROM OfficeHour WHERE ProfID = '" + currentProfId + "';");
             while (hours.Read() == true) {
                 officeHoursId.Add(hours.GetInt32(0));
                 bool[] days = { Convert.ToBoolean(hours.GetString(1)), Convert.ToBoolean(hours.GetString(2)), Convert.ToBoolean(hours.GetString(3)), Convert.ToBoolean(hours.GetString(4)), Convert.ToBoolean(hours.GetString(5)) };

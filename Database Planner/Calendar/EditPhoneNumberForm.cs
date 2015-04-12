@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
 using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -34,7 +34,7 @@ namespace Planner
             currentProfId = currentProf;
 
             //dynamically add phone number and types to combo box
-            SQLiteDataReader phones = Database.executeQuery("SELECT PhoneNumber, Type FROM Phone WHERE ProfID = '" + currentProfId + "';");
+            MySqlDataReader phones = Database.executeQuery("SELECT PhoneNumber, Type FROM Phone WHERE ProfID = '" + currentProfId + "';");
             while (phones.Read() == true) {
                 phoneNum.Add(phones.GetString(0));
                 phoneType.Add(phones.GetString(1));

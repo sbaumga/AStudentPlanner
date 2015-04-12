@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -92,7 +92,7 @@ namespace Planner
             currentClassId = classId[cbEditClass.SelectedIndex];
 
             //database supports multiple professors but this application only supports a single professor per class
-            SQLiteDataReader classProf = Database.executeQuery("SELECT ProfID FROM ClassProfessor WHERE ClassID = '" + currentClassId + "';");
+            MySqlDataReader classProf = Database.executeQuery("SELECT ProfID FROM ClassProfessor WHERE ClassID = '" + currentClassId + "';");
 
             //read single result
             if (classProf.Read() == true) {
@@ -107,7 +107,7 @@ namespace Planner
             classProf.Close();
 
             //dynamically populate class information
-            SQLiteDataReader selectedClass = Database.executeQuery("SELECT * FROM Class WHERE ClassID = '" + currentClassId + "';");
+            MySqlDataReader selectedClass = Database.executeQuery("SELECT * FROM Class WHERE ClassID = '" + currentClassId + "';");
 
             //only one item should be returned
             if (selectedClass.Read() == true) {
@@ -135,7 +135,7 @@ namespace Planner
                 txtClassLocation.Text = selectedClass.GetValue(11).ToString();
 
                 //dynamically add letter grades to drop down list
-                SQLiteDataReader letterGrades = Database.executeQuery("SELECT GradeLetter FROM GradingScaleValue WHERE ClassID ='" + currentClassId + "' ORDER BY BottomPercentage DESC;");
+                MySqlDataReader letterGrades = Database.executeQuery("SELECT GradeLetter FROM GradingScaleValue WHERE ClassID ='" + currentClassId + "' ORDER BY BottomPercentage DESC;");
                 cbFinalLetterGrade.Items.Clear();
                 while (letterGrades.Read() == true) {
                     cbFinalLetterGrade.Items.Add(letterGrades.GetString(0));

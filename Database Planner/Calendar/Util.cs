@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner {
     class Util {
@@ -78,7 +78,7 @@ namespace Planner {
             }
 
             //dynamically add professors to combo box, also storing ProfId and Email in separate lists
-            SQLiteDataReader profs = Database.executeQuery("SELECT " + attributes + " FROM Professor p" + fromClause + " WHERE " +whereClause + " ORDER BY LastName;");
+            MySqlDataReader profs = Database.executeQuery("SELECT " + attributes + " FROM Professor p" + fromClause + " WHERE " + whereClause + " ORDER BY LastName;");
             while (profs.Read() == true) {
                 profId.Add(profs.GetInt32(0));
                 
@@ -98,8 +98,8 @@ namespace Planner {
         //add all letter grades to the given combo box
         public static void addLetterGrades(ComboBox cbGrades) {
             cbGrades.Items.Clear();
-            
-            SQLiteDataReader grades = Database.executeQuery("SELECT GradeLetter FROM GradeLetterPoint;");
+
+            MySqlDataReader grades = Database.executeQuery("SELECT GradeLetter FROM GradeLetterPoint;");
             while (grades.Read() == true) {
                 cbGrades.Items.Add(grades.GetString(0));
             }
@@ -113,7 +113,7 @@ namespace Planner {
             cbSemesters.Items.Clear();
 
             //get semester information
-            SQLiteDataReader semesters = Database.executeQuery("SELECT SemesterID, Name FROM Semester ORDER BY SemesterID;");
+            MySqlDataReader semesters = Database.executeQuery("SELECT SemesterID, Name FROM Semester ORDER BY SemesterID;");
             while (semesters.Read() == true) {
                 semesterId.Add(semesters.GetInt32(0));
                 cbSemesters.Items.Add(semesters.GetString(1));
@@ -151,7 +151,7 @@ namespace Planner {
             }
               
             //get class information
-            SQLiteDataReader classes = Database.executeQuery("SELECT ClassID, Name FROM Class " + fromClause + " WHERE " + whereClause + " ORDER BY Name;");
+            MySqlDataReader classes = Database.executeQuery("SELECT ClassID, Name FROM Class " + fromClause + " WHERE " + whereClause + " ORDER BY Name;");
             while (classes.Read() == true) {
                 classId.Add(classes.GetInt32(0));
                 cbClasses.Items.Add(classes.GetString(1));
@@ -183,7 +183,7 @@ namespace Planner {
             
 
             //dynamically add class grade categories to combo box
-            SQLiteDataReader types = Database.executeQuery("SELECT Type FROM GradeCategory " + whereClause + " ORDER BY Type;");
+            MySqlDataReader types = Database.executeQuery("SELECT Type FROM GradeCategory " + whereClause + " ORDER BY Type;");
             while (types.Read() == true) {
                 if (cbTypes.Items.Contains(types.GetString(0)) == false) {
                     cbTypes.Items.Add(types.GetString(0));

@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -40,7 +40,7 @@ namespace Planner
             int currentCount = 0;
 
             //get a list of all the current category information for the selected class
-            SQLiteDataReader categories = Database.executeQuery("SELECT Type, Percentage, GradingMethod FROM GradeCategory WHERE ClassID = '" + currentClassId + "';");
+            MySqlDataReader categories = Database.executeQuery("SELECT Type, Percentage, GradingMethod FROM GradeCategory WHERE ClassID = '" + currentClassId + "';");
             while (categories.Read() == true) {
                 //populate current line with retrieved information
                 

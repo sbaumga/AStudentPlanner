@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -74,7 +74,7 @@ namespace Planner
             currentProfId = profId[cbEditProfessor.SelectedIndex];
 
             //dynamically populate professor information
-            SQLiteDataReader selectedProf = Database.executeQuery("SELECT * FROM Professor WHERE ProfID = '" + currentProfId + "';");
+            MySqlDataReader selectedProf = Database.executeQuery("SELECT * FROM Professor WHERE ProfID = '" + currentProfId + "';");
 
             //only one item should be returned
             if (selectedProf.Read() == true) {

@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
+using MySql.Data.MySqlClient;
 using Calendar;
 
 namespace Planner {
@@ -28,7 +28,7 @@ namespace Planner {
         private void OfficeHoursForm_Load(object sender, EventArgs e) {
 
             //get list of office hours for professors teaching a current ongoing class
-            SQLiteDataReader officeHour = Database.executeQuery("SELECT OfficeLocation, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, Title, LastName FROM OfficeHour NATURAL JOIN Professor WHERE ProfId IN (SELECT ProfID FROM ClassProfessor WHERE ClassID IN (SELECT ClassID FROM Class WHERE FinalLetterGrade IS NULL))");
+            MySqlDataReader officeHour = Database.executeQuery("SELECT OfficeLocation, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, Title, LastName FROM OfficeHour NATURAL JOIN Professor WHERE ProfId IN (SELECT ProfID FROM ClassProfessor WHERE ClassID IN (SELECT ClassID FROM Class WHERE FinalLetterGrade IS NULL))");
 			while (officeHour.Read() == true) {
                 
                 //determine for each day (Monday to Friday) whether to add an office hour period

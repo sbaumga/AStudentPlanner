@@ -5,8 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SQLite;
 using Calendar;
+using MySql.Data.MySqlClient;
 
 namespace Planner {
     public partial class ScheduleForm : Form {
@@ -25,7 +25,7 @@ namespace Planner {
 
         private void ScheduleForm_Load(object sender, EventArgs e) {
             //get the class information for each current ongoing class
-            SQLiteDataReader classHour = Database.executeQuery("SELECT ClassID, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, Name, Location, Title, LastName FROM ClassProfessorView WHERE FinalLetterGrade IS NULL");
+            MySqlDataReader classHour = Database.executeQuery("SELECT ClassID, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, Name, Location, Title, LastName FROM ClassProfessorView WHERE FinalLetterGrade IS NULL");
             while (classHour.Read() == true) {
 
                 //determine for each day (Monday to Friday) whether to add the class

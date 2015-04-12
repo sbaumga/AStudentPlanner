@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections;
-using System.Data.SQLite;
 using System.IO;
 
 namespace Planner
@@ -55,7 +54,7 @@ namespace Planner
 
                 //change the password (this action encrypts the database)
                 if (chkEncrypt.Checked == true) {
-                    Database.changePassword(Util.escape(txtConfirmPassword.Text));
+//                    Database.changePassword(Util.escape(txtConfirmPassword.Text));    No more database password.
                 }
                 lblError.Visible = false;
                 Close();
@@ -68,10 +67,10 @@ namespace Planner
         }
 
         private void CreateDatabaseForm_FormClosing(object sender, FormClosingEventArgs e) {
-            //do not allow use to exit form if database has not been created
+            /*//do not allow use to exit form if database has not been created
             if (File.Exists(Database.DB_PATH) == false){
                 e.Cancel = true;
-            }
+            }*/ // No more DB_PATH
         }
 
     }
