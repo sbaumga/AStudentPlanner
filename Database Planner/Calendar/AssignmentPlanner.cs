@@ -108,8 +108,9 @@ namespace Planner
 
             //create database if it does not already exist
             if (Database.exists() == false) {
-                CreateDatabaseForm createDB = new CreateDatabaseForm();
-                createDB.ShowDialog();
+                //CreateDatabaseForm createDB = new CreateDatabaseForm();
+                //createDB.ShowDialog();
+                Database.createDatabase();
                 isDatabaseOpen = true;
 
                 AddSemesterForm addSemester = new AddSemesterForm(true);
