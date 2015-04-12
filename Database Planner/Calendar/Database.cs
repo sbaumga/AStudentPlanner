@@ -6,10 +6,12 @@ using System.IO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Security;
+using MySql.Data.MySqlClient;
 
 namespace Planner {
     class Database {
 
+        /* Old stuff that I'm ignoring entirely.
         public static String DB_PATH = Util.DIR_PATH + "Planner.s3db";
 
         //stores connection and transaction details
@@ -21,29 +23,60 @@ namespace Planner {
 
         //needed since database class can be accessed and called from multiple threads
         private static Object threadLock = new Object();
+        */
+
+        private static MySqlConnection connection;
 
         //checks if the database exists, returning true if it does
         public static bool exists() {
-            return (File.Exists(DB_PATH));
+            //return (File.Exists(DB_PATH));
+
+            string connStr = "server=localhost;user=root;";
+            connection = new MySqlConnection(connStr);
+            MySqlCommand cmd;
+            bool bRet = false;
+
+            try
+            {
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = "SELECT SCHEMA_NAME FROM INFORMATION_SCHEMA.SCHEMATA WHERE SCHEMA_NAME = 'Planner'";
+                cmd.ExecuteNonQuery();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                bRet = reader.HasRows;
+
+            }
+            catch (Exception ex) {}
+
+            return bRet;
         }
 
         //command to create a new database
         public static bool createDatabase() {
-            lock (threadLock) {
-                string dbConnection = "Data Source=" + DB_PATH + ";Version=3;New=True;";
-                try {
-                    connection = new SQLiteConnection(dbConnection);
-                    connection.Open();
+            string connStr = "server=localhost;user=root;";
+            connection = new MySqlConnection(connStr);
+            MySqlCommand cmd;
 
-                    //Enforces foreign keys
-                    var pragma = new SQLiteCommand("PRAGMA foreign_keys = true;", connection);
-                    pragma.ExecuteNonQuery();
+            try
+            {
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = "CREATE DATABASE IF NOT EXISTS `Planner`;";
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception ex) {}
 
-                    //creates command to create all of all tables and the the 
-                    //  proper integrity, referential, and general constraints
-                    //  (See report for more detailed information about tables)
-                    SQLiteCommand createCommand = new SQLiteCommand(connection);
-                    createCommand.CommandText = "CREATE TABLE Professor (" +
+            connStr = "server=localhost;database=Planner;user=root;";
+            connection = new MySqlConnection(connStr);
+           
+            try
+            {
+                connection.Open();
+
+                cmd = connection.CreateCommand();
+
+                cmd.CommandText = "CREATE TABLE Professor (" +
                             "ProfID     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
                             "Title      TEXT," +
                             "FirstName  TEXT," +
@@ -235,17 +268,17 @@ namespace Planner {
                     "CREATE INDEX EventStartDateIndex ON Event(StartDateTime);" +
                     "CREATE INDEX EventEndDateIndex ON Event(EndDateTime);";
 
-                    //execute command
-                    createCommand.ExecuteNonQuery();
-                    return true;
-                }
-                catch (Exception error) {
-                    Util.logError(error.Message);
-                    return false;
-                }
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
         }
 
+        //NOTE: We probably want to modify it so we don't have to use this method at all. Dunno where it calls from.
         //creates a connection to the database, trying the given password
         public static bool connect(string password) {
             lock (threadLock) {
@@ -284,6 +317,7 @@ namespace Planner {
             }
         }
 
+        //NOTE: Remove this too. I have no idea how to work the error checking stuff.
         //initiates the the beginning of the transaction (any subsequent database operations
         //  will be rolled back if any error occurs before the changes are committed)
         public static void beginTransaction() {
@@ -297,6 +331,7 @@ namespace Planner {
             }
         }
 
+        //NOTE: Also something I don't want to do.
         //aborts current uncommitted changes
         public static void abort() {
             lock (threadLock) {
@@ -311,6 +346,7 @@ namespace Planner {
             }
         }
 
+        //NOTE: Yep, remove this too.
         //commits all changes to the database, ending a transaction
         public static void commit() {
             lock (threadLock) {
@@ -323,6 +359,7 @@ namespace Planner {
             }
         }
 
+        //NOTE: Our database has no password. This will be obsolete.
         //changes the password to the database once a connection has been established
         public static void changePassword(string newPassword) {
             lock (threadLock) {
@@ -358,6 +395,7 @@ namespace Planner {
             return getDate(dt) + " " + dt.TimeOfDay;
         }
 
+        //NOTE: We do not need this.
         //closes the connection
         public static void close() {
             lock (threadLock) {
@@ -373,20 +411,24 @@ namespace Planner {
         //modifies the database (INSERT, UPDATE, DELETE) and therefore only
         //  returns true or false if the query was successful
         public static bool modifyDatabase(String query) {
-            lock (threadLock) {
-                try {
-                    SQLiteCommand modifyCommand = new SQLiteCommand(connection);
-                    modifyCommand.CommandText = query;
-                    modifyCommand.ExecuteNonQuery();
-                    return true;
-                }
-                catch (SQLiteException error) {
-                    //abort transaction and log error
-                    abort();
-                    Util.logError(error.Message);
-                    return false;
-                }
+            string connStr = "server=localhost;database=Planner;user=root;";
+            connection = new MySqlConnection(connStr);
+            MySqlCommand cmd;
+
+            try
+            {
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = query;
+                cmd.ExecuteNonQuery();
+                connection.Close();
+                return true;
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            
         }
 
         //get id of most recently inserted row
@@ -396,7 +438,7 @@ namespace Planner {
 
         //check whether an attribute with a certian value exists in the table
         public static bool attributeExists(string attributeValue, string table) {
-            SQLiteDataReader reader = executeQuery("SELECT * FROM " + table + " WHERE " + attributeValue + ";");
+            MySqlDataReader reader = executeQuery("SELECT * FROM " + table + " WHERE " + attributeValue + ";");
             bool itemExists = false;
             if (reader.HasRows) {
                 itemExists = true;
@@ -408,38 +450,46 @@ namespace Planner {
 
         //executes a query that returns a single object
         public static object executeScalarQuery(String query) {
-            lock (threadLock) {
-                try {
-                    SQLiteCommand scalarQueryCommand = new SQLiteCommand(connection);
-                    scalarQueryCommand.CommandText = query;
-                    return scalarQueryCommand.ExecuteScalar();
-                }
-                catch (SQLiteException error) {
-                    //abort transaction and log error
-                    abort();
-                    Util.logError(error.Message);
-                    return null;
-                }
+            string connStr = "server=localhost;database=Planner;user=root;";
+            connection = new MySqlConnection(connStr);
+            MySqlCommand cmd;
+
+            try
+            {
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = query;
+                object retObj = cmd.ExecuteScalar();
+                connection.Close();
+                return retObj;
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 
         //executes a query that returns multiple results in the 
         //form of a data reader
-        public static SQLiteDataReader executeQuery(String query) {
-            lock (threadLock) {
-                try {
-                    SQLiteCommand queryCommand = new SQLiteCommand(connection);
-                    queryCommand.CommandText = query;
-                    SQLiteDataReader reader = queryCommand.ExecuteReader();
-                    return reader;
-                }
-                catch (SQLiteException error) {
-                    //abort transaction and log error
-                    abort();
-                    Util.logError(error.Message);
-                    return null;
-                }
+        public static MySqlDataReader executeQuery(String query) {
+            string connStr = "server=localhost;database=Planner;user=root;";
+            connection = new MySqlConnection(connStr);
+            MySqlCommand cmd;
+
+            try
+            {
+                connection.Open();
+                cmd = connection.CreateCommand();
+                cmd.CommandText = query;
+                MySqlDataReader retObj = cmd.ExecuteReader();
+                connection.Close();
+                return retObj;
             }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
         }
 
     }

@@ -51,3 +51,9 @@ C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.Prop
 C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
 C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
 C:\Users\Alwaysdeadfred\SENG401\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\bin\Debug\Calendar.DayView.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\bin\Debug\Calendar.DayView.pdb
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.Properties.CalendarResources.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb

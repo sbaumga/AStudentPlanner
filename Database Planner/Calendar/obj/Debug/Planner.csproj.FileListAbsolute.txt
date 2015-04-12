@@ -190,3 +190,35 @@ C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\De
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.csproj.GenerateResource.Cache
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.exe.manifest
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.application
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.exe.config
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.csprojResolveAssemblyReference.cache
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddEventForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AuthenticationForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.ContactForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddProfessorForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddPhoneNumberForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddOfficeHoursForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddClassForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddGradingScaleForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddSemesterForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.LoginForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditSemesterForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.GoogleAccountSettings.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditGradingScaleForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditClassForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditOfficeHoursForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditPhoneNumberForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditProfessorForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.CreateDatabaseForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.DatabaseEncryptionForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.DatabasePasswordForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditEventForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.EditGradeCategoriesForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.FinalsCalculatorForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AssignmentPlanner.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.AddGradeCategoriesForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.MailSettingsForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.OfficeHoursForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.Properties.Resources.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.ScheduleForm.resources
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.csproj.GenerateResource.Cache
