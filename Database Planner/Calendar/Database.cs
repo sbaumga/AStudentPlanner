@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Data.SQLite;
 using System.IO;
 using System.Windows.Forms;
 using System.Security.Cryptography;
@@ -17,10 +16,10 @@ namespace Planner {
         //stores connection and transaction details
         private static SQLiteConnection connection;
         private static SQLiteTransaction transaction;
-
+        */
         //store whether database is currently encrypted
         public static bool encrypted = false;
-        */
+        
         //needed since database class can be accessed and called from multiple threads
         private static Object threadLock = new Object();
         
@@ -280,46 +279,6 @@ namespace Planner {
             }
         }
 
-        //NOTE: We probably want to modify it so we don't have to use this method at all. Dunno where it calls from.
-        //creates a connection to the database, trying the given password
-        public static bool connect(string password) {
-            lock (threadLock) {
-                string dbConnection = "Data Source=" + DB_PATH + ";";
-
-                //if the password is not null, add the password to the connection string
-                if (password != null) {
-
-                    HashAlgorithm hashAlg = HashAlgorithm.Create("SHA256");
-                    byte[] encodedBytes = hashAlg.ComputeHash(Encoding.Unicode.GetBytes(password));
-                    StringBuilder encryptedPass = new StringBuilder();
-                    foreach (byte b in encodedBytes) {
-                        encryptedPass.Append(b.ToString());
-                    }
-
-                    dbConnection += "password=" + encryptedPass.ToString() + ";";
-                    encrypted = true;
-                }
-
-                //try to connect (if the password is null) an attempt will be made to 
-                //  connect without any password
-                try {
-                    connection = new SQLiteConnection(dbConnection);
-                    connection.Open();
-
-                    //Enforces foreign keys
-                    var pragma = new SQLiteCommand("PRAGMA foreign_keys = true;", connection);
-                    pragma.ExecuteNonQuery();
-
-                    return true;
-                }
-                catch (SQLiteException) {
-                    //if the database was encrypted but the incorrect, or no, password was given
-                    return false;
-                }
-            }
-        }
-
-        //NOTE: Remove this too. I have no idea how to work the error checking stuff.
         //initiates the the beginning of the transaction (any subsequent database operations
         //  will be rolled back if any error occurs before the changes are committed)
         public static void beginTransaction() {
@@ -327,13 +286,12 @@ namespace Planner {
                 try {
                     transaction = connection.BeginTransaction();
                 }
-                catch (SQLiteException error) {
+                catch (MySqlException error) {
                     Util.logError(error.Message);
                 }
             }
         }
 
-        //NOTE: Also something I don't want to do.
         //aborts current uncommitted changes
         public static void abort() {
             lock (threadLock) {
@@ -342,44 +300,17 @@ namespace Planner {
                         transaction.Rollback();
                     }
                 }
-                catch (SQLiteException error) {
+                catch (MySqlException error) {
                     Util.logError(error.Message);
                 }
             }
         }
 
-        //NOTE: Yep, remove this too.
         //commits all changes to the database, ending a transaction
         public static void commit() {
             lock (threadLock) {
                 try {
                     transaction.Commit();
-                }
-                catch (SQLiteException error) {
-                    Util.logError(error.Message);
-                }
-            }
-        }
-
-        //NOTE: Our database has no password. This will be obsolete.
-        //changes the password to the database once a connection has been established
-        public static void changePassword(string newPassword) {
-            lock (threadLock) {
-                try {
-
-                    if (newPassword == null) {
-                        connection.ChangePassword(newPassword);
-                        return;
-                    }            
-                    
-                    //enter string to encrypt database or null to permanently decrypt database    
-                    HashAlgorithm hashAlg = HashAlgorithm.Create("SHA256");
-                    byte[] encodedBytes = hashAlg.ComputeHash(Encoding.Unicode.GetBytes(newPassword));
-                    StringBuilder encryptedPass = new StringBuilder();
-                    foreach (byte b in encodedBytes) {
-                        encryptedPass.Append(b.ToString());
-                    }
-                    connection.ChangePassword(encryptedPass.ToString());
                 }
                 catch (MySqlException error) {
                     Util.logError(error.Message);
