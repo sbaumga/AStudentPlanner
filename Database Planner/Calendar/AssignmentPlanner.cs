@@ -9,9 +9,9 @@ using Calendar;
 using System.Runtime.InteropServices;
 using System.IO;
 using Planner;
-using System.Data.SQLite;
 using System.Text.RegularExpressions;
 using System.Threading;
+using MySql.Data.MySqlClient;
 
 namespace Planner
 {
@@ -127,37 +127,7 @@ namespace Planner
                     addClass.ShowDialog();
                 }
             }
-            else {
-                //try first connecting without a password
-                if (Database.connect(null) == false) {
-
-                    //if it fails, prompt the user for a password
-                    DatabasePasswordForm dbPasswordForm = new DatabasePasswordForm();
-                    dbPasswordForm.ShowDialog();
-
-                    //continue looping while user has entered incorrect password or
-                    //  until user quits, which will then terminate the program
-                    while (Database.connect(dbPasswordForm.password) == false) {
-                        DialogResult retry = MessageBox.Show("Incorrect Database Password. Try Again?", "Incorrect Password", MessageBoxButtons.RetryCancel, MessageBoxIcon.Exclamation);
-                        if (retry == DialogResult.Retry) {
-                            dbPasswordForm.ShowDialog();
-                        }
-                        else {
-                            Environment.Exit(0);
-                        }
-                    }
-
-                    //ensure database credentials are not stored in memory
-                    dbPasswordForm.eraseCredentials();
-
-                }
-
-                isDatabaseOpen = true;
-
-                if (PlannerSettings.Default.SyncEvents == true) {
-                    GoogleCalendarSync.authenticate();
-                }
-            }
+            else {}
 
             enableDisableToolStripMenuItem.Checked = PlannerSettings.Default.SyncEvents;
 
@@ -170,7 +140,7 @@ namespace Planner
 
         private void AssignmentPlanner_FormClosing(object sender, FormClosingEventArgs e) {
             //close the database connection when the form is closing
-            Database.close();
+            //Database.close(); No longer needed
         }
 
         public void updateStatus(string status) {
@@ -313,7 +283,7 @@ namespace Planner
                 //continue looping until file is unlocked and can be deleted
                 while (true) {
                     try {
-                        File.Delete(Database.DB_PATH);
+//                        File.Delete(Database.DB_PATH);    DB_PATH no longer exists.
                         break;
                     }
                     catch { /* occurs if file is locked */ }
@@ -530,7 +500,7 @@ namespace Planner
             rtxtCurrentGrades.Clear();
 
             //get class information
-            SQLiteDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade FROM Class WHERE FinalLetterGrade IS NULL ORDER BY Name;");
+            MySqlDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade FROM Class WHERE FinalLetterGrade IS NULL ORDER BY Name;");
             while (classes.Read() == true) {
                 rtxtCurrentGrades.AppendText(classes.GetString(0) + ": ");
                 if (classes.IsDBNull(1) == false) {
@@ -579,7 +549,7 @@ namespace Planner
             rtxtUpcomingAssignments.Clear();
 
             //get event information
-            SQLiteDataReader events = Database.executeQuery("SELECT Title, StartDateTime, IsAllDay FROM Event WHERE StartDateTime > DATETIME('now', 'localtime') ORDER BY StartDateTime");
+            MySqlDataReader events = Database.executeQuery("SELECT Title, StartDateTime, IsAllDay FROM Event WHERE StartDateTime > DATETIME('now', 'localtime') ORDER BY StartDateTime");
             for (int i = 0; i < numEventsToShow; i++) {
                 if (events.Read() == true) {
                     bool allDayEvent = Convert.ToBoolean(events.GetString(2));
@@ -687,7 +657,7 @@ namespace Planner
              BackgroundWorker bw = new BackgroundWorker();             
              bw.DoWork += delegate(object s, DoWorkEventArgs args) {
                  //get class information
-                 SQLiteDataReader events = Database.executeQuery("SELECT Title, Description, Location, StartDateTime, EndDateTime, IsAllDay, e.EventID, ClassID, GoogleEventID FROM Event e LEFT OUTER JOIN GradedAssignment g ON e.EventID = g.EventID WHERE DATE(StartDateTime) >= DATE('" + Database.getDate(start) + "') AND DATE(StartDateTime) <= DATE('" + Database.getDate(end) + "');");
+                 MySqlDataReader events = Database.executeQuery("SELECT Title, Description, Location, StartDateTime, EndDateTime, IsAllDay, e.EventID, ClassID, GoogleEventID FROM Event e LEFT OUTER JOIN GradedAssignment g ON e.EventID = g.EventID WHERE DATE(StartDateTime) >= DATE('" + Database.getDate(start) + "') AND DATE(StartDateTime) <= DATE('" + Database.getDate(end) + "');");
                  while (events.Read() == true) {
                      //create a new appointment from the event information stored in the database
                      Appointment appt = new Appointment();
@@ -850,7 +820,7 @@ namespace Planner
             query.Append(" ORDER BY StartDateTime");
 
             //get the list of events and populate the tree view
-            SQLiteDataReader events = Database.executeQuery(query.ToString());
+            MySqlDataReader events = Database.executeQuery(query.ToString());
             while (events.Read() == true) {
                 TreeNode eventName = new TreeNode(events.GetString(0));
                 TreeNode eventDate = new TreeNode("Date: " + events.GetDateTime(2).ToString("dddd, MMMM d, yyyy"));
@@ -976,7 +946,7 @@ namespace Planner
             tvGradeReport.Nodes.Clear();
 
             //dynamically add class grade categories to combo box
-            SQLiteDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade, FinalLetterGrade, ClassID FROM ClassProfessorView " + whereClause + " ORDER BY Name;");
+            MySqlDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade, FinalLetterGrade, ClassID FROM ClassProfessorView " + whereClause + " ORDER BY Name;");
             while (classes.Read() == true) {
                 //get the current class's id
                 int currentClassId = classes.GetInt32(4);
@@ -1027,7 +997,7 @@ namespace Planner
                 }
 
                 //get the list of grade categories associated with the class
-                SQLiteDataReader categories = Database.executeQuery("SELECT Type, CategoryGrade FROM GradeCategory WHERE ClassID = '" + currentClassId + "' ORDER BY Percentage;");
+                MySqlDataReader categories = Database.executeQuery("SELECT Type, CategoryGrade FROM GradeCategory WHERE ClassID = '" + currentClassId + "' ORDER BY Percentage;");
                 while (categories.Read() == true) {
                     TreeNode categoryName = null;
                     
@@ -1040,7 +1010,7 @@ namespace Planner
                     }
 
                     //get the list of grades in each grade category for the current class
-                    SQLiteDataReader grades = Database.executeQuery("SELECT AssignmentName, Grade, GradeTotalWorth FROM FullEventView WHERE ClassID = '" + currentClassId + "' AND Type = '" + categories.GetString(0) + "' ORDER BY StartDateTime;");
+                    MySqlDataReader grades = Database.executeQuery("SELECT AssignmentName, Grade, GradeTotalWorth FROM FullEventView WHERE ClassID = '" + currentClassId + "' AND Type = '" + categories.GetString(0) + "' ORDER BY StartDateTime;");
                     while (grades.Read() == true) {
                         TreeNode assignment = null;
 
@@ -1110,7 +1080,7 @@ namespace Planner
             tvEditGrades.Nodes.Clear();
 
             //dynamically add class grade categories to combo box
-            SQLiteDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade, ClassID FROM Class " + whereClause + " ORDER BY Name;");
+            MySqlDataReader classes = Database.executeQuery("SELECT Name, CurrentGrade, CurrentLetterGrade, ClassID FROM Class " + whereClause + " ORDER BY Name;");
             while (classes.Read() == true) {
                 int currentClassId = classes.GetInt32(3);
 
@@ -1124,7 +1094,7 @@ namespace Planner
                 }
 
                 //get the list of grade categories for the current class
-                SQLiteDataReader categories = Database.executeQuery("SELECT Type, CategoryGrade, GradingMethod FROM GradeCategory WHERE ClassID = '" + currentClassId + "' ORDER BY Percentage;");
+                MySqlDataReader categories = Database.executeQuery("SELECT Type, CategoryGrade, GradingMethod FROM GradeCategory WHERE ClassID = '" + currentClassId + "' ORDER BY Percentage;");
                 while (categories.Read() == true) {
                     TreeNode categoryName = null;
                     
@@ -1138,7 +1108,7 @@ namespace Planner
                     string gradingMethod = categories.GetString(2);
 
                     //get the list of grades for the current grade category for the current class
-                    SQLiteDataReader grades = Database.executeQuery("SELECT AssignmentName, Grade, GradeTotalWorth, EventID FROM FullEventView WHERE ClassID = '" + currentClassId + "' AND Type = '" + categories.GetString(0) + "' ORDER BY StartDateTime;");
+                    MySqlDataReader grades = Database.executeQuery("SELECT AssignmentName, Grade, GradeTotalWorth, EventID FROM FullEventView WHERE ClassID = '" + currentClassId + "' AND Type = '" + categories.GetString(0) + "' ORDER BY StartDateTime;");
                     while (grades.Read() == true) {
                         TreeNode assignment = null;
                         if (grades.IsDBNull(1) == false) {
