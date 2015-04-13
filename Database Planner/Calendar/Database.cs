@@ -45,7 +45,7 @@ namespace Planner {
                 bRet = reader.HasRows;
 
             }
-            catch (Exception ex) {}
+            catch (Exception ex) { return false; }
 
             return bRet;
         }
