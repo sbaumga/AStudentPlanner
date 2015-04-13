@@ -63,3 +63,4 @@ C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\DayView\obj\Deb
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.csproj.GenerateResource.Cache
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.DayView.dll
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.DayView.pdb
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\DayView\obj\Debug\Calendar.csprojResolveAssemblyReference.cache

@@ -205,3 +205,18 @@ C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\De
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.Properties.Resources.resources
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.ScheduleForm.resources
 C:\Users\Alwaysdeadfred\SENG401\AStudentPlanner\Database Planner\Calendar\obj\Debug\Planner.csproj.GenerateResource.Cache
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.exe.manifest
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.application
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.exe
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.pdb
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.DayView.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Google.GData.AccessControl.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Google.GData.Calendar.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Google.GData.Client.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Google.GData.Extensions.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\bin\Debug\Calendar.DayView.pdb
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.exe.manifest
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.application
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.exe
+C:\Users\Jonathan\Desktop\Git Repositories\AStudentPlanner\Database Planner\Calendar\obj\Debug\Calendar.pdb

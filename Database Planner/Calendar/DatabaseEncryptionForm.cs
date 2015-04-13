@@ -24,11 +24,11 @@ namespace Planner {
                 }
 
                 //if passwords match, change password
-                Database.changePassword(txtPassword.Text);
+//                Database.changePassword(txtPassword.Text);    No more password.
             }
             //to permanently decrypt database, set password to null
             else {
-                Database.changePassword(null);
+//                Database.changePassword(null);                No more password.
             }
             Close();
         }
