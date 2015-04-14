@@ -77,119 +77,117 @@ namespace Planner {
                     connection.Open();
                     cmd = connection.CreateCommand();
                     cmd.CommandText = "CREATE TABLE Professor (" +
-                                "ProfID     INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                "Title      TEXT," +
-                                "FirstName  TEXT," +
-                                "LastName   TEXT NOT NULL," +
-                                "Email      TEXT UNIQUE ON CONFLICT FAIL," +
-                                "OfficeLocation TEXT" +
-                            ");" +
-                            " " +
-                            "CREATE TABLE Phone (" +
-                                "PhoneNumber    TEXT    NOT NULL," +
-                                "ProfID         INTEGER NOT NULL," +
-                                "Type           TEXT," +
-                                "PRIMARY KEY (PhoneNumber,ProfID)," +
-                                "FOREIGN KEY (ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE" +
-                            ");" +
-                            " " +
-                            "CREATE TABLE OfficeHour (" +
-                                "OfficeHoursID  INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL," +
-                                "OnMonday   BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnTuesday  BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnWednesday BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnThursday BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnFriday   BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "StartTime      TIME    NOT NULL," +
-                                "EndTime        TIME    NOT NULL    CHECK(EndTime > StartTime)," +
-                                "ProfID         INTEGER," +
-                                "UNIQUE(OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, ProfID) ON CONFLICT REPLACE," +
-                                "FOREIGN KEY(ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE" +
-                            ");" +
-                            " " +
-                            "CREATE TABLE Semester(" +
-                                "SemesterID INTEGER NOT NULL PRIMARY KEY, " +
-                                "Name       TEXT    NOT NULL," +
-                                "StartDate  DATE    NOT NULL," +
-                                "EndDate    DATE    NOT NULL    CHECK(EndDate >= StartDate)" +
-                            ");" +
-                            " " +
-                            "CREATE TABLE Class (" +
-                                "ClassID    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                "Name       TEXT    NOT NULL," +
-                                "Credits    FLOAT NOT NULL    CHECK(Credits >= 0.0)," +
-                                "OnMonday   BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnTuesday  BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnWednesday BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnThursday BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "OnFriday   BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "SemesterID INTEGER," +
-                                "StartTime  TIME    NOT NULL," +
-                                "EndTime    TIME    NOT NULL    CHECK(EndTime >= StartTime)," +
-                                "Location   TEXT," +
-                                "CurrentGrade FLOAT     CHECK(CurrentGrade >= 0.0), " +
-                                "CurrentLetterGrade TEXT," +
-                                "FinalLetterGrade TEXT," +
-                                "UNIQUE(StartTime, EndTime, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, Location)," +
-                                "FOREIGN KEY(CurrentLetterGrade) REFERENCES GradeLetterPoint(GradeLetter) ON DELETE SET NULL," +
-                                "FOREIGN KEY(FinalLetterGrade) REFERENCES GradeLetterPoint(GradeLetter) ON DELETE SET NULL," +
-                                "FOREIGN KEY(SemesterID) REFERENCES Semester(SemesterID) ON DELETE SET NULL" +
-                            ");" +
-                            "  " +
-                            "CREATE TABLE ClassProfessor (" +
-                                "ProfID	INTEGER NOT NULL," +
-                                "ClassID INTEGER NOT NULL," +
-                                "PRIMARY KEY(ProfID, ClassID)," +
-                                "FOREIGN KEY (ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE," +
-                                "FOREIGN KEY (ClassID) REFERENCES Class(ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
-                            ");" +
-                            "  " +
-                            "CREATE TABLE Event (" +
-                                "EventID     INTEGER  NOT NULL PRIMARY KEY AUTOINCREMENT," +
-                                "Title          TEXT  NOT NULL," +
-                                "Description    TEXT," +
-                                "Location       TEXT," +
-                                "StartDateTime  DATETIME NOT NULL," +
-                                "EndDateTime    DATETIME NOT NULL   CHECK(EndDateTime >= StartDateTime)," +
-                                "IsAllDay         BOOLEAN DEFAULT 'FALSE' NOT NULL," +
-                                "GoogleEventID  TEXT" +
+                            "ProfID     INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT," +
+                            "Title      TEXT," +
+                            "FirstName  TEXT," +
+                            "LastName   TEXT NOT NULL," +
+                            "Email      TEXT," +
+                            "OfficeLocation TEXT" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE Phone (" +
+                            "PhoneNumber    varchar(20) NOT NULL PRIMARY KEY," +
+                            "ProfID         INT NOT NULL," +
+                            "Type           TEXT," +
+                            "FOREIGN KEY (ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE OfficeHour (" +
+                            "OfficeHoursID  INT PRIMARY KEY AUTO_INCREMENT NOT NULL," +
+                            "OnMonday   BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnTuesday  BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnWednesday BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnThursday BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnFriday   BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "StartTime      TIME    NOT NULL," +
+                            "EndTime        TIME    NOT NULL    CHECK(EndTime > StartTime)," +
+                            "ProfID         INT," +
+                            "UNIQUE(OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, StartTime, EndTime, ProfID)," +
+                            "FOREIGN KEY(ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE Semester(" +
+                            "SemesterID INT NOT NULL PRIMARY KEY, " +
+                            "Name       TEXT    NOT NULL," +
+                            "StartDate  DATE    NOT NULL," +
+                            "EndDate    DATE    NOT NULL    CHECK(EndDate >= StartDate)" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE GradeLetterPoint (" +
+                            "GradeLetter	varchar(5) PRIMARY KEY NOT NULL," +
+                            "Point			FLOAT UNIQUE NOT NULL    CHECK(Point >= 0.0)" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE Class (" +
+                            "ClassID    INT NOT NULL PRIMARY KEY AUTO_INCREMENT," +
+                            "Name       TEXT    NOT NULL," +
+                            "Credits    FLOAT NOT NULL    CHECK(Credits >= 0.0)," +
+                            "OnMonday   BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnTuesday  BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnWednesday BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnThursday BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "OnFriday   BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "SemesterID INT," +
+                            "StartTime  TIME    NOT NULL," +
+                            "EndTime    TIME    NOT NULL    CHECK(EndTime >= StartTime)," +
+                            "Location   varchar(20)," +
+                            "CurrentGrade FLOAT     CHECK(CurrentGrade >= 0.0), " +
+                            "CurrentLetterGrade varchar(5)," +
+                            "FinalLetterGrade varchar(5)," +
+                            "UNIQUE(StartTime, EndTime, OnMonday, OnTuesday, OnWednesday, OnThursday, OnFriday, Location)," +
+                            "FOREIGN KEY(CurrentLetterGrade) REFERENCES GradeLetterPoint(GradeLetter)," +
+                            "FOREIGN KEY(FinalLetterGrade) REFERENCES GradeLetterPoint(GradeLetter)," +
+                            "FOREIGN KEY(SemesterID) REFERENCES Semester(SemesterID)" +
                         ");" +
                         "  " +
+                        "CREATE TABLE ClassProfessor (" +
+                            "ProfID	INTEGER NOT NULL," +
+                            "ClassID INTEGER NOT NULL," +
+                            "PRIMARY KEY(ProfID, ClassID)," +
+                            "FOREIGN KEY (ProfID) REFERENCES Professor(ProfID) ON UPDATE CASCADE ON DELETE CASCADE," +
+                            "FOREIGN KEY (ClassID) REFERENCES Class(ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
+                        ");" +
+                        " " +
+                        "CREATE TABLE Event (" +
+                            "EventID     INTEGER  NOT NULL PRIMARY KEY AUTO_INCREMENT," +
+                            "Title          TEXT  NOT NULL," +
+                            "Description    TEXT," +
+                            "Location       TEXT," +
+                            "StartDateTime  DATETIME NOT NULL," +
+                            "EndDateTime    DATETIME NOT NULL   CHECK(EndDateTime >= StartDateTime)," +
+                            "IsAllDay         BOOLEAN DEFAULT FALSE NOT NULL," +
+                            "GoogleEventID  TEXT" +
+                        ");" +
+                        "  " +
+                        "CREATE TABLE GradeCategory (" +
+                            "Type       varchar(255)     NOT NULL," +
+                            "ClassID    INTEGER  NOT NULL," +
+                            "Percentage FLOAT  DEFAULT '0.00' NOT NULL   CHECK(Percentage BETWEEN 0.0 AND 100.0)," +
+                            "CategoryGrade FLOAT  CHECK(CategoryGrade >= 0.0)," +
+                            "GradingMethod varchar(255) DEFAULT 'Points' NOT NULL," +
+                            "PRIMARY KEY(Type, ClassID)," +
+                            "FOREIGN KEY(ClassID) REFERENCES Class(ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
+                        ");" +
+                        " " +
                         "CREATE TABLE GradedAssignment (" +
                             "EventID    INTEGER NOT NULL PRIMARY KEY," +
                             "AssignmentName TEXT    NOT NULL," +
                             "Grade           FLOAT    CHECK(Grade >= 0.0)," +
                             "GradeTotalWorth FLOAT    CHECK(GradeTotalWorth >= 0.0)," +
                             "ClassID        INTEGER NOT NULL," +
-                            "Type           TEXT    NOT NULL," +
+                            "Type           varchar(255)    NOT NULL," +
                             "FOREIGN KEY (EventID) REFERENCES Event(EventID) ON UPDATE CASCADE ON DELETE CASCADE," +
                             "FOREIGN KEY (Type, ClassID) REFERENCES GradeCategory(Type, ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
                         ");" +
-                        "  " +
-                        "CREATE TABLE GradeCategory (" +
-                            "Type       TEXT     NOT NULL," +
-                            "ClassID    INTEGER  NOT NULL," +
-                            "Percentage FLOAT  DEFAULT '0.00' NOT NULL   CHECK(Percentage BETWEEN 0.0 AND 100.0)," +
-                            "CategoryGrade FLOAT  CHECK(CategoryGrade >= 0.0)," +
-                            "GradingMethod TEXT DEFAULT 'Points' NOT NULL," +
-                            "PRIMARY KEY(Type, ClassID)," +
-                            "FOREIGN KEY(ClassID) REFERENCES Class(ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
-                        ");" +
-
                         " " +
                         "CREATE TABLE GradingScaleValue (" +
-                            "GradeLetter		TEXT NOT NULL," +
+                            "GradeLetter		varchar(5) NOT NULL," +
                             "ClassID			INTEGER NOT NULL," +
                             "BottomPercentage	FLOAT NOT NULL    CHECK(BottomPercentage BETWEEN 0.0 AND 100.0)," +
                             "PRIMARY KEY(GradeLetter,ClassID)," +
-                            "UNIQUE(ClassID, BottomPercentage) ON CONFLICT REPLACE," +
+                            "UNIQUE(ClassID, BottomPercentage)," +
                             "FOREIGN KEY(GradeLetter) REFERENCES GradeLetterPoint(GradeLetter) ON UPDATE CASCADE ON DELETE CASCADE," +
                             "FOREIGN KEY(ClassID) REFERENCES Class(ClassID) ON UPDATE CASCADE ON DELETE CASCADE" +
-                        ");" +
-                        " " +
-                        "CREATE TABLE GradeLetterPoint (" +
-                            "GradeLetter	TEXT PRIMARY KEY NOT NULL," +
-                            "Point			FLOAT UNIQUE NOT NULL    CHECK(Point >= 0.0)" +
                         ");" +
                         "  " +
                         "INSERT INTO GradeLetterPoint VALUES ('A', '4.0');" +
@@ -203,70 +201,7 @@ namespace Planner {
                         "INSERT INTO GradeLetterPoint VALUES ('D+', '1.30');" +
                         "INSERT INTO GradeLetterPoint VALUES ('D', '1.00');" +
                         "INSERT INTO GradeLetterPoint VALUES ('D-', '0.70');" +
-                        "INSERT INTO GradeLetterPoint VALUES ('F', '0.00');" +
-                        "  " +
-                        "CREATE TRIGGER [Update_Grade_Category] " +
-                        "AFTER UPDATE OF [Grade] " +
-                        "ON [GradedAssignment] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE GradeCategory SET CategoryGrade = (SELECT SUM(Grade) / SUM(GradeTotalWorth) * 100 FROM GradedAssignment WHERE Type = OLD.Type AND ClassID = OLD.ClassID AND Grade IS NOT NULL) WHERE Type = OLD.Type AND ClassID = OLD.ClassID; " +
-                        "UPDATE GradeCategory SET CategoryGrade = (SELECT SUM(Grade) / SUM(GradeTotalWorth) * 100 FROM GradedAssignment WHERE Type = NEW.Type AND ClassID = NEW.ClassID AND Grade IS NOT NULL) WHERE Type = NEW.Type AND ClassID = NEW.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Insert_Grade_Category] " +
-                        "AFTER INSERT " +
-                        "ON [GradedAssignment] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE GradeCategory SET CategoryGrade = (SELECT SUM(Grade) / SUM(GradeTotalWorth) * 100 FROM GradedAssignment WHERE Type = NEW.Type AND ClassID = NEW.ClassID AND Grade IS NOT NULL) WHERE Type = NEW.Type AND ClassID = NEW.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Delete_Grade_Category] " +
-                        "AFTER DELETE " +
-                        "ON [GradedAssignment] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE GradeCategory SET CategoryGrade = (SELECT SUM(Grade) / SUM(GradeTotalWorth) * 100 FROM GradedAssignment WHERE Type = OLD.Type AND ClassID = OLD.ClassID AND Grade IS NOT NULL) WHERE Type = OLD.Type AND ClassID = OLD.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Update_Current_Grade] " +
-                        "AFTER UPDATE OF [CategoryGrade] " +
-                        "ON [GradeCategory] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE Class SET CurrentGrade = (SELECT SUM(CategoryGrade * Percentage) / SUM(Percentage) FROM GradeCategory  WHERE ClassID = OLD.ClassID AND CategoryGrade IS NOT NULL) WHERE ClassID = OLD.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Insert_Current_Grade] " +
-                        "AFTER INSERT " +
-                        "ON [GradeCategory] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE Class SET CurrentGrade = (SELECT SUM(CategoryGrade * Percentage) / SUM(Percentage) FROM GradeCategory  WHERE ClassID = NEW.ClassID AND CategoryGrade IS NOT NULL) WHERE ClassID = NEW.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Delete_Current_Grade] " +
-                        "AFTER DELETE " +
-                        "ON [GradeCategory] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE Class SET CurrentGrade = (SELECT SUM(CategoryGrade * Percentage) / SUM(Percentage) FROM GradeCategory  WHERE ClassID = OLD.ClassID AND CategoryGrade IS NOT NULL) WHERE ClassID = OLD.ClassID; " +
-                        "END;" +
-                        "  " +
-                        "CREATE TRIGGER [Update_Current_Letter_Grade] " +
-                        "AFTER UPDATE OF [CurrentGrade] " +
-                        "ON [Class] " +
-                        "FOR EACH ROW " +
-                        "BEGIN " +
-                        "UPDATE Class SET CurrentLetterGrade = (SELECT GradeLetter FROM GradingScaleValue WHERE NEW.CurrentGrade >= BottomPercentage AND ClassID = NEW.ClassID ORDER BY BottomPercentage DESC) WHERE ClassID = NEW.ClassID;" +
-                        "END;" +
-                        "  " +
-                        "CREATE VIEW  ClassProfessorView AS SELECT * FROM Class LEFT NATURAL JOIN ClassProfessor LEFT NATURAL JOIN Professor;" +
-                        "CREATE VIEW FullEventView AS SELECT * FROM Event e LEFT OUTER JOIN GradedAssignment g ON e.EventID == g.EventID;" +
-                        "  " +
-                        "CREATE INDEX EventStartDateIndex ON Event(StartDateTime);" +
-                        "CREATE INDEX EventEndDateIndex ON Event(EndDateTime);";
+                        "INSERT INTO GradeLetterPoint VALUES ('F', '0.00');";
 
                     cmd.ExecuteNonQuery();
                     connection.Close();

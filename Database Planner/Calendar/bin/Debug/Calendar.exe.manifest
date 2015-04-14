@@ -43,14 +43,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calendar.exe" size="3716608">
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MySql.Data" version="6.9.6.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="MySql.Web" version="6.9.6.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Calendar.exe" size="3710464">
       <assemblyIdentity name="Calendar" version="1.0.0.0" language="neutral" processorArchitecture="amd64" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>h36/lr8Sn5a1K53hy1ZmKCUogTg=</dsig:DigestValue>
+        <dsig:DigestValue>KDERItzC3hFMQ3YXdRq8G3afZ+A=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,79 +72,67 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EGiiGca2ZVdpgd9w4Yn7sSnxD8o=</dsig:DigestValue>
+        <dsig:DigestValue>LzztenynTa/RRI35Q+2O2OA4HDg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.AccessControl.dll" size="20480">
-      <assemblyIdentity name="Google.GData.AccessControl" version="1.7.0.1" publicKeyToken="B4B8EB9A7AFC8328" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.AccessControl.dll" size="24576">
+      <assemblyIdentity name="Google.GData.AccessControl" version="2.2.0.0" publicKeyToken="B4B8EB9A7AFC8328" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>DyP8bX1XoZUNXUoAhEE1uwwr3KQ=</dsig:DigestValue>
+        <dsig:DigestValue>8IHjy2MDAC64PUakYbHW5x9s4Go=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.Calendar.dll" size="36864">
-      <assemblyIdentity name="Google.GData.Calendar" version="1.7.0.1" publicKeyToken="AA6748391206B888" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="Google.GData.Calendar" version="2.2.0.0" publicKeyToken="AA6748391206B888" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Z/tcPNGJl9DNvuCQREb6l2X9QeI=</dsig:DigestValue>
+        <dsig:DigestValue>upqgR8qUcgixDb3SBiclRNuSFiw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.Client.dll" size="184320">
-      <assemblyIdentity name="Google.GData.Client" version="1.7.0.1" publicKeyToken="04A59CA9B0273830" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.Client.dll" size="212992">
+      <assemblyIdentity name="Google.GData.Client" version="2.2.0.0" publicKeyToken="04A59CA9B0273830" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cNPt7JK/uRSAgSegXsxguSlO5v0=</dsig:DigestValue>
+        <dsig:DigestValue>3TIWm2irC+ECBqHWoZXHIUplCVM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.Extensions.dll" size="86016">
-      <assemblyIdentity name="Google.GData.Extensions" version="1.7.0.1" publicKeyToken="0B4C5DF2EBF20876" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Google.GData.Extensions.dll" size="90112">
+      <assemblyIdentity name="Google.GData.Extensions" version="2.2.0.0" publicKeyToken="0B4C5DF2EBF20876" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YSHF0U8uou5fK+D6T61OuO7Yl4M=</dsig:DigestValue>
+        <dsig:DigestValue>SZRdXKq6ZvYijBXPv6fXEPqTL+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="443904">
-      <assemblyIdentity name="MySql.Data" version="6.9.6.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="375296">
+      <assemblyIdentity name="Newtonsoft.Json" version="4.0.5.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>ui8VfQ0K/p/yRfI/0lGbZNoPitc=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Web.dll" size="147456">
-      <assemblyIdentity name="MySql.Web" version="6.9.6.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>8sEhkdMe2DG4I6lYYS1kI8C232c=</dsig:DigestValue>
+        <dsig:DigestValue>PWfiqBrVe+y4natQdfWTKNHZ+Vc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
