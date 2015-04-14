@@ -13,19 +13,40 @@ namespace Planner
     {
         private String username = "username";
         private String password = "password";
-        private Timer timer = new Timer();
+        private Timer timer1 = new Timer();
+        private Timer timer2 = new Timer();
 
         public LoginForm()
         {
             InitializeComponent();
-            timer.Interval = 5000;
-            timer.Tick += new EventHandler(RemoveMessage);
+            txtUsername.KeyDown += CheckIfEnter;
+            txtPassword.KeyDown += CheckIfEnter;
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(FlashMessage);
+            timer2.Interval = 5000;
+            timer2.Tick += new EventHandler(FadeMessage);
+
+         
+
         }
 
-        private void RemoveMessage(Object sender, EventArgs e)
+        private void CheckIfEnter(Object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(null, null);
+            }
+        }
+
+        private void FlashMessage(Object sender, EventArgs e) {
+            lblInvalid.ForeColor = Color.Red;
+            timer1.Stop();
+        }
+
+        private void FadeMessage(Object sender, EventArgs e)
         {
             lblInvalid.Visible = false;
-            timer.Stop();
+            timer2.Stop();
         }
 
          //event handler for when the create database button is pressed
@@ -39,7 +60,9 @@ namespace Planner
             else
             {
                 lblInvalid.Visible = true;
-                timer.Start();
+                lblInvalid.ForeColor = Color.HotPink;
+                timer1.Start();
+                timer2.Start();
             }
         }
 
